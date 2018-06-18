@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+
+# Editor
+*.swp
+.brackets.json
+
+# LaTeX
+*.aux
+*.log
+*.out
+
+# Project
+src/variables.sty
+out/
