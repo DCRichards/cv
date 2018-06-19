@@ -1,5 +1,7 @@
 # Curriculum Vitae
 
+> My Curriculum Vitae
+
 ## Setup
 
 1. You'll need LaTeX installed, you can find installers for your platform at [latex-project.org/get](https://www.latex-project.org/get/).
@@ -25,3 +27,4 @@ To generate a PDF, run the following:
 cd src/
 xelatex -output-directory=../out ./cv.tex
 ```
+The generated PDF can be found in `out/cv.pdf`.
