@@ -7,6 +7,7 @@
 \usepackage{geometry}
 \usepackage[none]{hyphenat}
 \usepackage{longtable}
+\usepackage{fontawesome}
 
 \def\middot{\textperiodcentered~}
 
@@ -14,7 +15,7 @@
   colorlinks = true,
   urlcolor = black,
   pdfauthor = {\name: \name},
-  pdfkeywords = {David, Richards, software, developer, Brighton},
+  pdfkeywords = {David, Richards, software, developer},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -29,7 +30,7 @@
  bottom=10mm,
 }
 
-\setmainfont{Lato}
+\setmainfont{NotoSans}
 \pagestyle{empty}
 
 \setlength\parindent{0em}
@@ -51,45 +52,33 @@
   \href{mailto:\email}{\email}
   \middot \href{tel:\phone}{\phone}
   \break
-  \href{https://dcrichards.com/}{dcrichards.com}
-  \middot \href{https://github.com/DCRichards}{github.com/DCRichards} 
+  \href{https://dcrichards.com/}{\faicon{globe} dcrichards.com }
+  \href{https://github.com/DCRichards}{\faicon{github} DCRichards} 
 \end{minipage}
-
-\vspace{0.25in}
-
-\begin{tabular}{@{} p{0.15\textwidth} p{0.85\textwidth}}
-  \textbf{EDUCATION} & \begin{minipage} [t] {0.85\textwidth} 2011 - 2015 \href{https://sussex.ac.uk/}{\textbf{University of Sussex}}, Brighton \\
-  \textbf{First Class}: BSc (Hons) Computer Science (with an Industrial Placement Year) \\
-  \newline
-    Final Year Project: Two-factor Authentication in Wearable Technologies, developing a two-factor authentication application for the Pebble Smartwatch and Google Glass using Time-Based One-Time Passwords (TOTP). \\
-    \newline
-    Notable Modules:
-    \begin{itemize}
-      \setlength\itemsep{-4pt}
-      \item Web Applications \& Services (J2EE, JSF, GlassFish, Java DB, AWS)
-      \item Databases (SQL)
-      \item Machine Learning, Natural Language Engineering (Python)
-      \item Comparative Programming (Haskell, Prolog)
-      \item Compilers \& Computer Architecture (MIPS, x86)
-    \end{itemize}
-    Additional Experience:
-    \begin{itemize}
-      \item Student Life speaker for Informatics Applications Visit Days, giving talks on course content and experience to prospective students and parents.
-    \end{itemize}
-  \end{minipage} \\
-  & \\
-  & 2009-2011 South Downs College, Waterlooville \\
-  & A Level: Computing (A), Mathematics (B), Chemistry (B) \\
-  & \\
-  & 2004-2009 Park Community School, Havant \\
-  & GCSE: 11 subjects A* to B grade including Maths (A*) and English (A) \\
-\end{tabular}
 
 \vspace{0.25in}
 
 \begin{longtable}{@{} p{0.15\textwidth} p{0.85\textwidth}}
   \textbf{PROFESSIONAL EXPERIENCE} & \begin{minipage} [t] {0.85\textwidth}
-    February 2016 - Present \href{https://ocasta.com}{\textbf{Ocasta}, Brighton} \middot Software Developer \\
+    May 2019 - Present \href{https://www.hiddenfield.com}{\textbf{HiddenField}}, Remote \middot Head Of Development\\
+    \newline
+    HiddenField deliver cyber security products through agile solutions.
+    \begin{itemize}
+      \item Recent projects include a hardware wallet integration for a leading cryptocurrency organisation, building an end-to-end testing framework between device and client to ensure integrity, security and testability across all stages of the development process.
+    \end{itemize}
+  \end{minipage} \\
+  & \\
+  & \begin{minipage} [t] {0.85\textwidth}
+    January 2018 - September 2018 \href{https://www.hiddenfield.com}{\textbf{HiddenField}}, Remote \middot Contract Developer\\
+    \newline
+    HiddenField deliver cyber security products through agile solutions.
+    \begin{itemize}
+      \item Recent projects include a hardware wallet integration for a leading cryptocurrency organisation, building an end-to-end testing framework between device and client to ensure integrity, security and testability across all stages of the development process.
+    \end{itemize}
+  \end{minipage} \\
+  & \\
+  & \begin{minipage} [t] {0.85\textwidth}
+    February 2016 - August 2018 \href{https://ocasta.com}{\textbf{Ocasta}, Brighton} \middot Software Developer \\
     \newline
     Ocasta specialise in apps, web and everything in between. Ocasta are also the creators of the Oplift customer engagement platform.
     \begin{itemize}
@@ -101,15 +90,6 @@
       \item Wordpress development (PHP, Hack(lang)/HHVM) to provide REST API access to managed content.
       \item Collaborating closely with the design team to build UI to design specifications and provide feedback. Making use of design collaboration tools such as Sketch and Zeplin.
       \item Managing multiple agile processes including story estimation and prioritisation both within and across multiple projects.
-    \end{itemize}
-  \end{minipage} \\
-  & \\
-  & \begin{minipage} [t] {0.85\textwidth}
-    January 2018 - Present \href{https://www.hiddenfield.com}{\textbf{HiddenField}} \middot Contract Developer (Remote)\\
-    \newline
-    HiddenField deliver cyber security products through agile solutions.
-    \begin{itemize}
-      \item Recent projects include a hardware wallet integration for a leading cryptocurrency organisation, building an end-to-end testing framework between device and client to ensure integrity, security and testability across all stages of the development process.
     \end{itemize}
   \end{minipage} \\
   & \\
@@ -140,11 +120,39 @@
       \item Developed RESTful Web Services in Java (JAX-RS) and Node.js including interaction with SQL Server database.
       \item Improved automation, build and deployment tools using Grunt and Ant and integrated with the Jenkins Continuous Integration server.
       \item Providing training and guidance for interns on the development processes and technology stack to ensure a smooth changeover at the end of my placement.
-      \item Used Subversion and Git version control.
-      \item Used Windows (IIS, Windows Server), OSX and UNIX (Ubuntu) environments, including UNIX command line.
     \end{itemize}
   \end{minipage}
 \end{longtable}
+
+\vspace{0.25in}
+
+\begin{tabular}{@{} p{0.15\textwidth} p{0.85\textwidth}}
+  \textbf{EDUCATION} & \begin{minipage} [t] {0.85\textwidth} 2011 - 2015 \href{https://sussex.ac.uk/}{\textbf{University of Sussex}}, Brighton \\
+  \textbf{First Class}: BSc (Hons) Computer Science (with an Industrial Placement Year) \\
+  \newline
+    Final Year Project: Two-factor Authentication in Wearable Technologies, developing a two-factor authentication application for the Pebble Smartwatch and Google Glass using Time-Based One-Time Passwords (TOTP). \\
+    \newline
+    Notable Modules:
+    \begin{itemize}
+      \setlength\itemsep{-4pt}
+      \item Web Applications \& Services (J2EE, JSF, GlassFish, Java DB, AWS)
+      \item Databases (SQL)
+      \item Machine Learning, Natural Language Engineering (Python)
+      \item Comparative Programming (Haskell, Prolog)
+      \item Compilers \& Computer Architecture (MIPS, x86)
+    \end{itemize}
+    Additional Experience:
+    \begin{itemize}
+      \item Student Life speaker for Informatics Applications Visit Days, giving talks on course content and experience to prospective students and parents.
+    \end{itemize}
+  \end{minipage} \\
+  & \\
+  & 2009-2011 South Downs College, Waterlooville \\
+  & A Level: Computing (A), Mathematics (B), Chemistry (B) \\
+  & \\
+  & 2004-2009 Park Community School, Havant \\
+  & GCSE: 11 subjects A* to B grade including Maths (A*) and English (A) \\
+\end{tabular}
 
 \vspace{0.25in}
 

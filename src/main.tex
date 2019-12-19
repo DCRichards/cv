@@ -1,0 +1,127 @@
+\documentclass{article}
+
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{variables}
+\usepackage{xcolor}
+
+\geometry{a4paper, top=0.5cm, bottom=1cm, left=1.5cm, right=1.5cm}
+
+\setsansfont{Work Sans}
+\setmainfont{Lora}
+\titleformat{\section}{\sffamily\Large}{\thesection}{1.2em}{}[{\titlerule[0.75pt]}]
+\pagenumbering{gobble}
+\hypersetup{hidelinks}
+
+\newenvironment{exptable}{
+  \begin{longtable}{lp{0.8\textwidth}}
+  }{
+  \end{longtable}
+}
+\setlist[itemize]{itemsep=0pt, topsep=0.25em, leftmargin=2em}
+
+\begin{document}
+  \begin{center}
+    {\Huge \sffamily\selectfont \MakeUppercase{\name}}
+  \end{center}
+
+  \vspace{0.5em}
+
+  \begin{minipage}[t]{0.45\textwidth}
+    \raggedleft
+    \address \\
+    \href{mailto:\email}{\email} \\
+    \href{tel:\phone}{\phone} \\
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}[t]{0.45\textwidth}
+    \href{https://github.com/DCRichards}{\faicon{github} github.com/DCRichards} \\
+    \href{https://linkedin.com/in/dcrichards24}{\faicon{linkedin} linkedin.com/in/DCRichards24} \\
+    \href{https://dcrichards.com}{\faicon{mouse-pointer} dcrichards.com} \\
+  \end{minipage}
+
+  \section*{PROFESSIONAL EXPERIENCE}
+    \begin{exptable}
+      \textcolor{darkgray}{May 2019--Present}  & \textbf{Head of Development} HiddenField, Remote \\
+      \multicolumn{2}{p{\textwidth}}{
+        \begin{itemize}
+          \item Responsible for the full stack development of the CoinCover product.
+        \end{itemize}
+      Technologies: Vue.js, Go, Node.js.
+      \vspace{1em}
+      } \\
+      \textcolor{darkgray}{Jan 2018--Sep 2018} & \textbf{Contract Developer} HiddenField, Remote \\
+      \multicolumn{2}{p{\textwidth}}{
+        \begin{itemize}
+          \item Adding Cardano ADA coin support to the Ledger Nano S Hardware Wallet. My primary role was building an end-to-end test framework to test the integration of the native C code with the Node.js SDK. I was also responsible for the final integration of the SDK into the codebase.
+        \end{itemize}
+      } \\
+      \textcolor{darkgray}{Feb 2016--Aug 2018} & \textbf{Software Developer} Ocasta, Brighton \\
+      \multicolumn{2}{p{\textwidth}}{
+        \begin{itemize}
+          \item Android development on a number of widely-used applications, including Virgin Media WiFi, providing WiFi Hotspot access to over 500,000 customers. Making use of modern Android tooling, including Kotlin/Java with RxJava, Retrofit 2, Robolectric, Espresso, Room and Android Architecture/Lifecycle Components.
+          \item Technical lead on the Home WiFi project, extending Virgin Media WiFi to provide customers with direct control of their router. This included building an abstracted REST API on top of the SNMP over REST API provided.
+          \item Developing services and microservices in Node.js (Hapi.js/Koa, Mocha/Chai, JSHint/Eslint, MongoDB) and Go.
+          \item Building GraphQL APIs and integrating these into existing RESTful architecture as well as part of standalone microservices.
+          \item Wordpress development (PHP, Hack(lang)/HHVM) to provide REST API access to managed content.
+          \item Collaborating closely with the design team to build UI to design specifications and provide feedback. Making use of design collaboration tools such as Sketch and Zeplin.
+        \end{itemize}
+      } \\
+      \textcolor{darkgray}{Jul 2015--Dec 2015} & \textbf{Developer} Mobbu, Brighton \\
+      \multicolumn{2}{p{\textwidth}}{
+        % Rejoined the team at Mobbu to work on their new flagship product PassWear: A mobile and smartwatch based two-factor authentication solution.
+        \begin{itemize}
+          \item Developed a large proportion of the PassWear Android SDK, including writing of the high-level API, integration with wearables and high level and API documentation.
+          \item Development of wearable applications on Pebble (C), Android Wear (Java) and Apple Watch (Objective-C).
+          \item Development of mobile application on both Android (Java, Gradle) and iOS (Objective-C).
+          \item Continued work within the agile development team, this time using Kanban maintained by Jira and code reviews using Crucible.
+          \item Managed internal dependencies using Maven and Nexus repository manager.
+        \end{itemize}
+      } \\
+      \textcolor{darkgray}{Aug 2013--Aug 2014} & \textbf{Intern Developer (Placement Year)} Mobbu, Brighton \\
+      \multicolumn{2}{p{\textwidth}}{
+        \begin{itemize}
+          \item Worked as part of a small Agile software development team, took part in daily stand-up meetings, retrospectives and sprint reviews and used story pointing for task estimation.
+          \item Web application development in JavaScript (including using Ractive.js templating/UI library)
+          \item Mobile application development using Apache Cordova on BlackBerry and Android platforms.
+          \item Unit testing using QUnit/Jasmine and integration testing using CasperJS and PhantomJS.
+          \item Developed RESTful Web Services in Java (JAX-RS) and Node.js including interaction with SQL Server database.
+          \item Improved automation, build and deployment tools using Grunt and Ant and integrated with the Jenkins Continuous Integration server.
+          \item Providing training and guidance for interns on the development processes and technology stack to ensure a smooth changeover at the end of my placement.
+        \end{itemize}
+      } \\
+    \end{exptable}
+
+  \section*{EDUCATION}
+    \begin{exptable}
+      \textcolor{darkgray}{2011--2015} & {\bf University Of Sussex}, Brighton \\
+                 & {\bf First Class}: BSc (Hons) Computer Science (with an Industrial Placement Year) \\
+                 & \\
+      \multicolumn{2}{p{\textwidth}}{
+      Final Year Project: Two-factor Authentication in Wearable Technologies, developing a two-factor authentication application for the Pebble Smartwatch and Google Glass using Time-Based One-Time Passwords (TOTP).
+      } \\
+                 & \\
+      \textcolor{darkgray}{2009--2011} & South Downs College, Havant \\
+                 & A Level: Computing (A), Mathematics (B), Chemistry (B) \\
+                 & \\
+      \textcolor{darkgray}{2004--2009} & Park Community School, Havant \\
+                 & GCSE: 11 subjects A* to B grade including Maths (A*) and English (A)
+    \end{exptable}
+
+ \section*{PERSONAL INTERESTS}
+  I love to travel and recently completed a 7 month trip around SE Asia, Australia and New Zealand. 
+  I also enjoy cycling around the countryside on my road bike, digital photography and singing and guitar playing, although not at the same time.
+
+ \section*{OTHER}
+   Full, clean, UK Drivers License.
+
+  \section*{REFERENCES}
+    References are available upon request.
+
+\end{document}

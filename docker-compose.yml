@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  tex:
+    build: .
+    volumes:
+      - ./src:/usr/src/tex/src
+      - ./assets:/usr/src/tex/assets
+      - ./dist:/usr/src/tex/dist
