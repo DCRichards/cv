@@ -1,18 +1,25 @@
-FROM miktex/miktex
+FROM ubuntu:bionic
 
-RUN mpm --find-updates && \
-mpm --install l3backend && \
-mpm --install fontawesome
+WORKDIR /data/tex
 
-WORKDIR /usr/src/tex
+RUN apt-get update && apt-get -y install wget perl libfontconfig1 fontconfig
 
-COPY . .
+RUN wget -qO- "https://yihui.org/gh/tinytex/tools/install-unx.sh" | sh
+
+ENV PATH="${PATH}:/root/bin"
+
+RUN tlmgr install enumitem fontawesome titlesec xcolor
+
+COPY src/ .
+COPY dist/ ./dist
+COPY assets/ ./assets
 
 # Add custom fonts
-RUN mkdir $HOME/.fonts
-# Docker doesn't currently support COPY with .folder names
-RUN cp ./assets/fonts/* $HOME/.fonts/
-RUN cp /miktex/.miktex/texmfs/install/fonts/opentype/public/fontawesome/FontAwesome.otf $HOME/.fonts
+RUN mkdir ~/.fonts
+# # Docker doesn't currently support COPY with .folder names
+RUN cp ./assets/fonts/* ~/.fonts/
+# RUN cp /usr/local/share/miktex-texmf/fonts/opentype/public/fontawesome/FontAwesome.otf $HOME/.fonts
+RUN cp /root/.TinyTeX/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf ~/.fonts
 RUN fc-cache -f -v
 
-CMD ["latexmk", "-outdir=../dist", "-pvc", "-xelatex", "-cd", "src/main.tex"]
+CMD ["latexmk", "-outdir=./dist", "-pvc", "-xelatex", "cv.tex"]
