@@ -3,7 +3,6 @@
 
 # Editor
 *.swp
-.brackets.json
 
 # LaTeX
 *.aux
@@ -12,4 +11,5 @@
 
 # Project
 src/variables.sty
-out/
+dist/*
+!dist/.gitkeep 
