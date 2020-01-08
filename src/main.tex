@@ -13,9 +13,12 @@
 
 \geometry{a4paper, top=0.5cm, bottom=1cm, left=1.5cm, right=1.5cm}
 
-\setsansfont{Work Sans}
-\setmainfont{Lora}
-\titleformat{\section}{\sffamily\Large}{\thesection}{1.2em}{}[{\titlerule[0.75pt]}]
+\setsansfont[Ligatures=TeX,Scale=0.9]{Work Sans}
+\setmainfont[Ligatures=TeX,Scale=0.9]{Lora}
+
+\titleformat{\section}{\sffamily\Large}{\thesection}{0em}{}[{\titlerule[0.5pt]}]
+\titlespacing\section{0em}{0em}{0pt plus 1em minus 1em}
+
 \pagenumbering{gobble}
 \hypersetup{hidelinks}
 
@@ -28,75 +31,115 @@
 
 \begin{document}
   \begin{center}
-    {\Huge \sffamily\selectfont \MakeUppercase{\name}}
+    {\Huge \sffamily\selectfont \MakeUppercase{\textmd{\name}}}
   \end{center}
-
-  \vspace{0.5em}
 
   \begin{minipage}[t]{0.45\textwidth}
     \raggedleft
-    \address \\
     \href{mailto:\email}{\email} \\
     \href{tel:\phone}{\phone} \\
   \end{minipage}
   \hspace{1em}
-  \begin{minipage}[t]{0.45\textwidth}
-    \href{https://github.com/DCRichards}{\faicon{github} github.com/DCRichards} \\
-    \href{https://linkedin.com/in/dcrichards24}{\faicon{linkedin} linkedin.com/in/DCRichards24} \\
-    \href{https://dcrichards.com}{\faicon{mouse-pointer} dcrichards.com} \\
+  \begin{minipage}[t]{0.4\textwidth}
+    \href{https://github.com/DCRichards}{github.com/DCRichards} \\
+    \href{https://dcrichards.com}{dcrichards.com} \\
   \end{minipage}
+
+  \vspace{-1.5em}
+
+  \begin{center}
+  \address
+  \end{center}
 
   \section*{PROFESSIONAL EXPERIENCE}
     \begin{exptable}
       \textcolor{darkgray}{May 2019--Present}  & \textbf{Head of Development} HiddenField, Remote \\
       \multicolumn{2}{p{\textwidth}}{
         \begin{itemize}
-          \item Responsible for the full stack development of the CoinCover product.
+          \item Technical Lead for Coincover project, a web platform for providing theft protection and recovery for Cryptocurrency wallets.
+          \item Intergrating Go service with numerous external REST services, evolving architecture and implementation to overcome the associated challenges.
+          \item High-level planning and system design, managing client expectation as well as designing and carrying out the implementation.
         \end{itemize}
-      Technologies: Vue.js, Go, Node.js.
-      \vspace{1em}
+
+        \vspace{1em}
+
+        \begin{itemize}[leftmargin=1em]
+          \item[] Technologies: HTML, JS (ES6), CSS, Vue.js, Go, MongoDB, Docker
+        \end{itemize}
       } \\
+
+      \textcolor{darkgray}{Sep 2018--Apr 2019} & Career Break: Travelling \\
+      \multicolumn{2}{p{\textwidth}}{} \\
+
       \textcolor{darkgray}{Jan 2018--Sep 2018} & \textbf{Contract Developer} HiddenField, Remote \\
       \multicolumn{2}{p{\textwidth}}{
         \begin{itemize}
-          \item Adding Cardano ADA coin support to the Ledger Nano S Hardware Wallet. My primary role was building an end-to-end test framework to test the integration of the native C code with the Node.js SDK. I was also responsible for the final integration of the SDK into the codebase.
+          \item Adding Cardano ADA coin support to the Ledger Nano S Hardware Wallet. My primary role was building an end-to-end test framework to test the integration of the native C code with the Node.js SDK.
+          \item Integrated the ADA SDK into the Ledger public repository, ensuring code standards and conventions met.
+        \end{itemize}
+
+        \vspace{1em}
+
+        \begin{itemize}[leftmargin=1em]
+          \item[] Technologies: Node.js (Mocha/Chai, Typescript), C, Vagrant
         \end{itemize}
       } \\
       \textcolor{darkgray}{Feb 2016--Aug 2018} & \textbf{Software Developer} Ocasta, Brighton \\
       \multicolumn{2}{p{\textwidth}}{
         \begin{itemize}
-          \item Android development on a number of widely-used applications, including Virgin Media WiFi, providing WiFi Hotspot access to over 500,000 customers. Making use of modern Android tooling, including Kotlin/Java with RxJava, Retrofit 2, Robolectric, Espresso, Room and Android Architecture/Lifecycle Components.
+          \item Android development on a number of widely-used applications, including Virgin Media WiFi, providing WiFi Hotspot access to over 500,000 customers.
           \item Technical lead on the Home WiFi project, extending Virgin Media WiFi to provide customers with direct control of their router. This included building an abstracted REST API on top of the SNMP over REST API provided.
-          \item Developing services and microservices in Node.js (Hapi.js/Koa, Mocha/Chai, JSHint/Eslint, MongoDB) and Go.
+          \item Developing services and microservices in Go and Node.js, as well as managing their development and production environments using Docker and Drone CI.
           \item Building GraphQL APIs and integrating these into existing RESTful architecture as well as part of standalone microservices.
-          \item Wordpress development (PHP, Hack(lang)/HHVM) to provide REST API access to managed content.
+          \item Wordpress development to provide REST API access to managed content.
           \item Collaborating closely with the design team to build UI to design specifications and provide feedback. Making use of design collaboration tools such as Sketch and Zeplin.
+        \end{itemize}
+
+        \vspace{1em}
+
+        \begin{itemize}[leftmargin=1em]
+          \item[] Technologies: Android (Kotlin and Java, RxJava, Retrofit2, Robolectric, Espresso, Room and Architecture/Lifecycle Components), Go, Node.js (Hapi/Koa, Mocha/Chai, Eslint), Docker (Docker Hub, Rancher), MongoDB, PHP, Hack(lang), GraphQL, HTML, CSS.
         \end{itemize}
       } \\
       \textcolor{darkgray}{Jul 2015--Dec 2015} & \textbf{Developer} Mobbu, Brighton \\
       \multicolumn{2}{p{\textwidth}}{
-        % Rejoined the team at Mobbu to work on their new flagship product PassWear: A mobile and smartwatch based two-factor authentication solution.
         \begin{itemize}
           \item Developed a large proportion of the PassWear Android SDK, including writing of the high-level API, integration with wearables and high level and API documentation.
-          \item Development of wearable applications on Pebble (C), Android Wear (Java) and Apple Watch (Objective-C).
-          \item Development of mobile application on both Android (Java, Gradle) and iOS (Objective-C).
+          \item Development of wearable applications on Pebble, Android Wear and Apple Watch.
+          \item Developed mobile application on both Android and iOS, including modularising part of the Android application for the SDK.
           \item Continued work within the agile development team, this time using Kanban maintained by Jira and code reviews using Crucible.
           \item Managed internal dependencies using Maven and Nexus repository manager.
         \end{itemize}
+
+        \vspace{1em}
+
+        \begin{itemize}[leftmargin=1em]
+          \item[] Technologies: Android (Java, Modules using Gradle/Maven), iOS (Objective-C), C.
+        \end{itemize}
       } \\
+
+      \clearpage
+
       \textcolor{darkgray}{Aug 2013--Aug 2014} & \textbf{Intern Developer (Placement Year)} Mobbu, Brighton \\
       \multicolumn{2}{p{\textwidth}}{
         \begin{itemize}
           \item Worked as part of a small Agile software development team, took part in daily stand-up meetings, retrospectives and sprint reviews and used story pointing for task estimation.
-          \item Web application development in JavaScript (including using Ractive.js templating/UI library)
+          \item Web application development for a messaging and mapping client with unit and integration testing within a headless browser (PhantomJS).
           \item Mobile application development using Apache Cordova on BlackBerry and Android platforms.
-          \item Unit testing using QUnit/Jasmine and integration testing using CasperJS and PhantomJS.
-          \item Developed RESTful Web Services in Java (JAX-RS) and Node.js including interaction with SQL Server database.
-          \item Improved automation, build and deployment tools using Grunt and Ant and integrated with the Jenkins Continuous Integration server.
+          \item Developed RESTful Web Services in Java and Node.js, with data stored in SQL Server.
+          \item Improved automation, build and deployment tools using both Grunt and Ant and integrated with cJenkins CI.
           \item Providing training and guidance for interns on the development processes and technology stack to ensure a smooth changeover at the end of my placement.
+        \end{itemize}
+
+        \vspace{1em}
+
+        \begin{itemize}[leftmargin=1em]
+          \item[] Technologies: JS (Ractive.js templating, QUnit/Jasmine, CasperJS, PhantomJS), Apache Cordova (Blackberry/Android), Java (JAX-RS), SQL Server, Jenkins CI, Grunt, Ant.
         \end{itemize}
       } \\
     \end{exptable}
+
+  \vspace{-1em}
 
   \section*{EDUCATION}
     \begin{exptable}
@@ -114,14 +157,39 @@
                  & GCSE: 11 subjects A* to B grade including Maths (A*) and English (A)
     \end{exptable}
 
+ \section*{PERSONAL PROJECTS}
+ \vspace{1em}
+  \begin{itemize}
+    \item \href{http://shouldieatthere.co.uk}{\textbf{shouldieatthere.co.uk}}: A simple SPA written in Vue.js, allowing users to view the Food Hygiene rating of any UK establishment.
+    \item \textbf{Curriculum Vitae}: This CV itself is typeset in LaTeX. My current workflow uses Docker for continuous compilation and PDF generation.
+  \end{itemize}
+ \vspace{1em}
+
+ \section*{VOLUNTEER EXPERIENCE}
+  \vspace{1em}
+  \begin{itemize}
+    \item \href{https://codebar.io/brighton}{\textbf{Codebar Brighton}}: Codebar provides programming tuition to under-represented groups. As well as providing coaching at sessions, I developed and presented an interactive Git workshop, teaching Git version control to Codebar attendees. I later presented the talk at Async.js (Brighton JS Meetup).
+    \item \href{https://www.coderdojobrighton.co.uk}{\textbf{CoderDojo}}: Assisted in teaching children simple programming skills in Scratch, Python and Java.
+  \end{itemize}
+  \vspace{1em}
+
  \section*{PERSONAL INTERESTS}
-  I love to travel and recently completed a 7 month trip around SE Asia, Australia and New Zealand. 
-  I also enjoy cycling around the countryside on my road bike, digital photography and singing and guitar playing, although not at the same time.
+  \vspace{1em}
+  \begin{itemize}
+    \item I love travel and culture. Last year I completed a seven month trip around Southeast Asia and Australasia.
+    \item I also enjoy cooking, road cycling, photography and playing and recording music, although not all at the same time.
+  \end{itemize}
+  \vspace{1em}
 
  \section*{OTHER}
-   Full, clean, UK Drivers License.
+  \vspace{1em}
+  \begin{itemize}
+    \item Full, clean, UK Drivers License.
+  \end{itemize}
+  \vspace{1em}
 
   \section*{REFERENCES}
+    \vspace{1em}
     References are available upon request.
 
 \end{document}

@@ -22,4 +22,4 @@ RUN cp ./assets/fonts/* ~/.fonts/
 RUN cp /root/.TinyTeX/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf ~/.fonts
 RUN fc-cache -f -v
 
-CMD ["latexmk", "-outdir=./dist", "-pvc", "-xelatex", "cv.tex"]
+CMD ["latexmk", "-outdir=./dist", "-pvc", "-xelatex", "main.tex"]

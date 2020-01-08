@@ -11,4 +11,5 @@
 
 # Project
 src/variables.sty
-dist/
+dist/*
+!dist/.gitkeep 
