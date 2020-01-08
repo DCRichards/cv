@@ -16,9 +16,8 @@ COPY assets/ ./assets
 
 # Add custom fonts
 RUN mkdir ~/.fonts
-# # Docker doesn't currently support COPY with .folder names
+# Docker doesn't currently support COPY with .folder names
 RUN cp ./assets/fonts/* ~/.fonts/
-# RUN cp /usr/local/share/miktex-texmf/fonts/opentype/public/fontawesome/FontAwesome.otf $HOME/.fonts
 RUN cp /root/.TinyTeX/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf ~/.fonts
 RUN fc-cache -f -v
 
