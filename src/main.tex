@@ -11,7 +11,7 @@
 \usepackage{variables}
 \usepackage{xcolor}
 
-\geometry{a4paper, top=0.5cm, bottom=1cm, left=1.5cm, right=1.5cm}
+\geometry{a4paper, top=1cm, bottom=1cm, left=1.5cm, right=1.5cm}
 
 \setsansfont[Ligatures=TeX,Scale=0.9]{Work Sans}
 \setmainfont[Ligatures=TeX,Scale=0.9]{Lora}
@@ -34,22 +34,20 @@
     {\Huge \sffamily\selectfont \MakeUppercase{\textmd{\name}}}
   \end{center}
 
-  \begin{minipage}[t]{0.45\textwidth}
-    \raggedleft
+  \begin{minipage}[t]{0.6\textwidth}
+    \raggedright
     \href{mailto:\email}{\email} \\
     \href{tel:\phone}{\phone} \\
+    \address
   \end{minipage}
-  \hspace{1em}
-  \begin{minipage}[t]{0.4\textwidth}
+  \begin{minipage}[t]{0.35\textwidth}
+    \raggedleft
+    \smallskip
+    \href{https://dcrichards.com}{https://dcrichards.com} \\
     \href{https://github.com/DCRichards}{github.com/DCRichards} \\
-    \href{https://dcrichards.com}{dcrichards.com} \\
   \end{minipage}
 
-  \vspace{-1.5em}
-
-  \begin{center}
-  \address
-  \end{center}
+  \vspace{1.5em}
 
   \section*{PROFESSIONAL EXPERIENCE}
     \begin{exptable}
@@ -64,7 +62,7 @@
         \vspace{1em}
 
         \begin{itemize}[leftmargin=1em]
-          \item[] Technologies: HTML, JS (ES6), CSS, Vue.js, Go, MongoDB, Docker
+          \item[] Technologies: Vue.js, HTML, JS (ES6), CSS, Go, MongoDB, Docker
         \end{itemize}
       } \\
 
@@ -161,7 +159,7 @@
  \vspace{1em}
   \begin{itemize}
     \item \href{http://shouldieatthere.co.uk}{\textbf{shouldieatthere.co.uk}}: A simple SPA written in Vue.js, allowing users to view the Food Hygiene rating of any UK establishment.
-    \item \textbf{Curriculum Vitae}: This CV itself is typeset in LaTeX. My current workflow uses Docker for continuous compilation and PDF generation.
+    \item \textbf{Curriculum Vitae}: This document is typeset in LaTeX. My current workflow uses Docker for continuous compilation and PDF generation.
   \end{itemize}
  \vspace{1em}
 
